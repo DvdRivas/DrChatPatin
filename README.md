@@ -4,6 +4,43 @@
 
 **A Decentralized AI-Powered Medical Assistant for Rare Disease Diagnosis on the Internet Computer Protocol**
 
+
+## Abstract
+
+DrChatPatin is a decentralized application (dApp) designed to assist healthcare professionals and patients in the preliminary diagnosis of rare diseases, following diagnostic criteria aligned with the U.S. Food and Drug Administration (FDA) standards. The system operates entirely on the **Internet Computer Protocol (ICP)**, ensuring data immutability, censorship resistance, and persistent conversation storage through on-chain canister smart contracts. The frontend and backend components are co-deployed on the ICP network, eliminating reliance on centralized cloud infrastructure.
+
+---
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Tech Stack](#tech-stack)
+- [System Architecture](#system-architecture)
+- [Technology Stack](#technology-stack)
+- [Deployed Canisters](#deployed-canisters)
+- [Repository Structure](#repository-structure)
+- [Prerequisites](#prerequisites)
+- [Local Development Setup](#local-development-setup)
+- [Build & Deployment](#build--deployment)
+- [Available Scripts](#available-scripts)
+- [Environment Configuration](#environment-configuration)
+- [Motoko Dependencies](#motoko-dependencies)
+- [References](#references)
+
+---
+
+## Overview
+
+Rare diseases affect a disproportionately small patient population, which historically has led to limited diagnostic tooling and clinical decision support. DrChatPatin addresses this gap by providing an AI-assisted conversational interface capable of guiding diagnostic reasoning according to established FDA rare disease classifications.
+
+Key properties of the system:
+
+- **Decentralized execution**: Both the user interface and conversation storage logic are deployed as ICP canisters, ensuring no single point of failure.
+- **Persistent conversation history**: Patient-provider interactions are stored immutably on-chain via the backend canister.
+- **Voice interaction support**: The application supports speech-to-text input, improving accessibility in clinical environments.
+- **Secure rendering**: AI responses are rendered as sanitized Markdown to prevent injection vulnerabilities.
+- **Internet Identity integration**: User authentication is handled by DFINITY's Internet Identity canister, providing pseudonymous, cryptographically secure login without passwords.
+
 ---
 
 ## Tech Stack
@@ -56,41 +93,6 @@
 | Node.js | JavaScript runtime | ≥ 16.0.0 |
 | npm | Package manager | ≥ 7.0.0 |
 | dotenv | Environment variable management | 16.4.x |
-
-## Abstract
-
-DrChatPatin is a decentralized application (dApp) designed to assist healthcare professionals and patients in the preliminary diagnosis of rare diseases, following diagnostic criteria aligned with the U.S. Food and Drug Administration (FDA) standards. The system operates entirely on the **Internet Computer Protocol (ICP)**, ensuring data immutability, censorship resistance, and persistent conversation storage through on-chain canister smart contracts. The frontend and backend components are co-deployed on the ICP network, eliminating reliance on centralized cloud infrastructure.
-
----
-
-## Table of Contents
-
-- [Overview](#overview)
-- [System Architecture](#system-architecture)
-- [Technology Stack](#technology-stack)
-- [Deployed Canisters](#deployed-canisters)
-- [Repository Structure](#repository-structure)
-- [Prerequisites](#prerequisites)
-- [Local Development Setup](#local-development-setup)
-- [Build & Deployment](#build--deployment)
-- [Available Scripts](#available-scripts)
-- [Environment Configuration](#environment-configuration)
-- [Motoko Dependencies](#motoko-dependencies)
-- [References](#references)
-
----
-
-## Overview
-
-Rare diseases affect a disproportionately small patient population, which historically has led to limited diagnostic tooling and clinical decision support. DrChatPatin addresses this gap by providing an AI-assisted conversational interface capable of guiding diagnostic reasoning according to established FDA rare disease classifications.
-
-Key properties of the system:
-
-- **Decentralized execution**: Both the user interface and conversation storage logic are deployed as ICP canisters, ensuring no single point of failure.
-- **Persistent conversation history**: Patient-provider interactions are stored immutably on-chain via the backend canister.
-- **Voice interaction support**: The application supports speech-to-text input, improving accessibility in clinical environments.
-- **Secure rendering**: AI responses are rendered as sanitized Markdown to prevent injection vulnerabilities.
-- **Internet Identity integration**: User authentication is handled by DFINITY's Internet Identity canister, providing pseudonymous, cryptographically secure login without passwords.
 
 ---
 
