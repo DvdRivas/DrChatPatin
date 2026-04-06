@@ -2,6 +2,8 @@
 
 ![banner](/images/banner-drchatpatin.jpg)
 
+[![DOI](https://zenodo.org/badge/1202424664.svg)](https://doi.org/10.5281/zenodo.19435403)
+
 **A Decentralized AI-Powered Medical Assistant for Rare Disease Diagnosis on the Internet Computer Protocol**
 
 
