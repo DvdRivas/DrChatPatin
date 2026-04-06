@@ -219,11 +219,12 @@ For frontend hot-reloading during development:
 # Regenerate Candid declarations (recommended before starting)
 npm run generate
 
-# Start the development server
-npm start
+# Start the development server from `/src/DrChatPatin_frontend/src`
+npm start 
+
 ```
 
-The development server runs at `http://localhost:8080` and proxies all canister API requests to the local replica at port `4943`.
+The development server runs at `http://localhost:3000` and proxies all canister API requests to the local replica at port `4943`.
 
 ---
 
@@ -232,7 +233,7 @@ The development server runs at `http://localhost:8080` and proxies all canister 
 To compile the full project for production:
 
 ```bash
-npm run build
+dfx deploy
 ```
 
 To deploy to the ICP mainnet, ensure your DFX identity is configured and funded with cycles, then run:
@@ -305,8 +306,13 @@ Backend canister dependencies are managed via **MOPS** and declared in `mops.tom
 - MOPS Package Registry: [https://mops.one](https://mops.one)
 - Internet Identity: [https://identity.ic0.app](https://identity.ic0.app)
 - FDA Rare Diseases Resources: [https://www.fda.gov/patients/rare-diseases-fda](https://www.fda.gov/patients/rare-diseases-fda)
-- DOMPurify: [https://github.com/cure53/DOMPurify](https://github.com/cure53/DOMPurify)
 
 ---
+
+> ⚠️ NOTE: To use this code, the following parts of the code must be adapted:
+* `Cipher.js`: Change the type of encryption (it must match the API)
+* Integrate the API URLs in `App.jsx` function `get_answer` and `send_data`
+* For local testing, `Internet Identity` is used as the authentication method provider, while for deployment on mainnet, `NFID` is used. This is determined automatically in `main.jsx`
+* Modi1fy the administrator `identity` in the backend (`main.mo`)
 
 *Repository maintained by [DvdRivas](https://github.com/DvdRivas). Deployed on the Internet Computer mainnet.*
