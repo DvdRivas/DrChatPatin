@@ -14,7 +14,6 @@ DrChatPatin is a decentralized application (dApp) designed to assist healthcare 
 ## Table of Contents
 
 - [Overview](#overview)
-- [Tech Stack](#tech-stack)
 - [System Architecture](#system-architecture)
 - [Technology Stack](#technology-stack)
 - [Deployed Canisters](#deployed-canisters)
