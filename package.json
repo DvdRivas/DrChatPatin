@@ -1,0 +1,30 @@
+{
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=7.0.0"
+  },
+  "name": "DrChatPatin",
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "prebuild": "npm run prebuild --workspaces --if-present",
+    "pretest": "npm run prebuild --workspaces --if-present",
+    "start": "npm start --workspaces --if-present",
+    "test": "npm test --workspaces --if-present"
+  },
+  "type": "module",
+  "workspaces": [
+    "src/DrChatPatin_frontend"
+  ],
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/icons-material": "^6.4.7",
+    "@mui/material": "^6.4.7",
+    "@mui/styled-engine": "^6.4.6",
+    "dompurify": "^3.2.7",
+    "dotenv": "^16.4.7",
+    "marked": "^15.0.9",
+    "react-hook-speech-to-text": "^0.8.0",
+    "react-speech-recognition": "^4.0.0"
+  }
+}
