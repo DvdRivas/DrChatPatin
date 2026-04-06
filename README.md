@@ -43,7 +43,35 @@ Key properties of the system:
 
 ---
 
-## Tech Stack
+## System Architecture
+
+The application follows a two-canister architecture deployed on the Internet Computer mainnet:
+
+```
+┌─────────────────────────────────────────────────┐
+│              Internet Computer (ICP)            │
+│                                                 │
+│  ┌──────────────────────┐  ┌─────────────────┐  │
+│  │  DrChatPatin_frontend│  │ DrChatPatin_    │  │
+│  │  (Asset Canister)    │◄─►│ backend        │  │
+│  │                      │  │ (Motoko Canister)│ │
+│  │  React + TypeScript  │  │                 │  │
+│  │  MUI v6 + SCSS       │  │ Conversation    │  │
+│  └──────────────────────┘  │ Storage & Logic │  │
+│            ▲               └─────────────────┘  │
+│            │                                    │
+│  ┌─────────┴──────────┐                         │
+│  │  Internet Identity │                         │
+│  │   (Auth Canister)  │                         │
+│  └────────────────────┘                         │
+└─────────────────────────────────────────────────┘
+```
+
+The frontend canister serves the React-based user interface as static assets. The backend canister, written in Motoko, manages conversation state and persistent storage. Authentication delegates to the Internet Identity canister (`rdmx6-jaaaa-aaaaa-aaadq-cai`), maintained by the DFINITY Foundation.
+
+---
+
+## Technology Stack
 
 ### Blockchain & Infrastructure
 
@@ -93,53 +121,6 @@ Key properties of the system:
 | Node.js | JavaScript runtime | ≥ 16.0.0 |
 | npm | Package manager | ≥ 7.0.0 |
 | dotenv | Environment variable management | 16.4.x |
-
----
-
-## System Architecture
-
-The application follows a two-canister architecture deployed on the Internet Computer mainnet:
-
-```
-┌─────────────────────────────────────────────────┐
-│              Internet Computer (ICP)            │
-│                                                 │
-│  ┌──────────────────────┐  ┌─────────────────┐  │
-│  │  DrChatPatin_frontend│  │ DrChatPatin_    │  │
-│  │  (Asset Canister)    │◄─►│ backend        │  │
-│  │                      │  │ (Motoko Canister)│ │
-│  │  React + TypeScript  │  │                 │  │
-│  │  MUI v6 + SCSS       │  │ Conversation    │  │
-│  └──────────────────────┘  │ Storage & Logic │  │
-│            ▲               └─────────────────┘  │
-│            │                                    │
-│  ┌─────────┴──────────┐                         │
-│  │  Internet Identity │                         │
-│  │   (Auth Canister)  │                         │
-│  └────────────────────┘                         │
-└─────────────────────────────────────────────────┘
-```
-
-The frontend canister serves the React-based user interface as static assets. The backend canister, written in Motoko, manages conversation state and persistent storage. Authentication delegates to the Internet Identity canister (`rdmx6-jaaaa-aaaaa-aaadq-cai`), maintained by the DFINITY Foundation.
-
----
-
-## Technology Stack
-
-| Layer | Technology | Version |
-|---|---|---|
-| Frontend Framework | React + TypeScript | — |
-| Styling | SCSS + Material UI (MUI) | MUI v6.4.x |
-| Smart Contract Language | Motoko | — |
-| Blockchain Platform | Internet Computer Protocol (ICP) | DFX v1 |
-| Package Manager (Motoko) | MOPS | — |
-| Authentication | Internet Identity (DFINITY) | Remote canister |
-| Markdown Rendering | marked | v15.0.x |
-| HTML Sanitization | DOMPurify | v3.2.x |
-| Voice Input | react-speech-recognition | v4.0.x |
-| Voice Input (hook) | react-hook-speech-to-text | v0.8.x |
-| Node.js Runtime | Node.js | ≥ 16.0.0 |
-| Package Manager | npm | ≥ 7.0.0 |
 
 ---
 
