@@ -4,6 +4,8 @@
 
 **A Decentralized AI-Powered Medical Assistant for Rare Disease Diagnosis on the Internet Computer Protocol**
 
+[![DOI](https://zenodo.org/badge/1202424664.svg)](https://doi.org/10.5281/zenodo.19444007)
+
 ## Tech Stack
 
 ### Frontend & Web
