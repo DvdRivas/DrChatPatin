@@ -1,0 +1,1 @@
+You can download NRD.db (requiered for use_rag method) from: https://drive.google.com/file/d/1GF5SomG5MAjBHpsEkmHHV2jDinNLJb6B/view?usp=sharing
