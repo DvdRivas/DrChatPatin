@@ -62,7 +62,7 @@ DrChatPatin is a decentralized application (dApp) designed to assist healthcare 
 - [Available Scripts](#available-scripts)
 - [Environment Configuration](#environment-configuration)
 - [Motoko Dependencies](#motoko-dependencies)
-- [Supplementary Material](#complementary-material)
+- [Supplementary Material](#supplementary-material)
 - [References](#references)
 
 ---
