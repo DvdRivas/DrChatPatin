@@ -74,12 +74,12 @@ DrChatPatin addresses the need for AI-assisted support in the differential diagn
 
 Key properties of the system:
 
-- **Decentralized execution**: Both the user interface and conversation storage logic are deployed as ICP canisters, ensuring no single point of failure.
-- **Persistent conversation history**:Interactions are encrypted and stored on-chain through the backend canister.
+- **Decentralized execution**: Both the user interface and conversation storage logic are deployed as ICP canisters, reducing reliance on a single centalized application component.
+- **Persistent conversation history**: Interactions are encrypted and stored on-chain through the backend canister.
 - **External AI integration**: A dedicated API layer connects the application to an external AI model, enabling intelligent diagnostic responses.
 - **Voice interaction support**: The application supports speech-to-text input, improving accessibility in clinical environments.
 - **Secure rendering**: AI responses are rendered as sanitized Markdown to prevent injection vulnerabilities.
-- **Internet Identity integration via NFID**: User authentication is handled by NFID (Identity Provider), providing pseudonymous, cryptographically secure login.
+- **Authentication via NFID**:  User authentication is handled through NFID, an identity provider available to ICP applications, providing pseudonymous, cryptographically secure login.
 
 ---
 
@@ -87,7 +87,7 @@ Key properties of the system:
 
 The application follows a three-part architecture composed of two ICP canisters and an external API layer for AI inference.
 
-![Diagram-Arquitecture](/images/Arquitecture.png)
+![DrChatPatin System Architecture](/images/Arquitecture.png)
 
 The frontend canister serves the React-based user interface as static assets. The backend canister, written in Motoko, manages conversation state and persistent storage. The API layer handles communication with an external AI model responsible for generating diagnostic responses.
 
