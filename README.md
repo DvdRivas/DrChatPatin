@@ -42,9 +42,10 @@
 ![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=flat&logo=ubuntu&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05033?style=flat&logo=git&logoColor=white)
 ![Markdown](https://img.shields.io/badge/Markdown-000000?style=flat&logo=markdown&logoColor=white)
+
 ## Abstract
 
-DrChatPatin is a decentralized application (dApp) designed to assist healthcare professionals and patients in the preliminary diagnosis of rare diseases, following diagnostic criteria aligned with the U.S. Food and Drug Administration (FDA) standards. The system operates entirely on the **Internet Computer Protocol (ICP)**, ensuring data immutability, censorship resistance, and persistent conversation storage through on-chain canister smart contracts. The frontend and backend components are co-deployed on the ICP network, eliminating reliance on centralized cloud infrastructure.
+DrChatPatin is a decentralized medical assistant for differential diagnosis of common and rare diseases. The clinician-facing interface and encrypted conversation storage are deployed on the Internet Computer Protocol (ICP) through dedicated canisters, while AI inference is handled through an external API layer. The system combines secure web-based interaction, persistent encrypted conversation management, and AI-assisted diagnostic support in a hybrid Web3/Web2 architecture.
 
 ---
 
@@ -69,12 +70,12 @@ DrChatPatin is a decentralized application (dApp) designed to assist healthcare 
 
 ## Overview
 
-Rare diseases affect a disproportionately small patient population, which historically has led to limited diagnostic tooling and clinical decision support. DrChatPatin addresses this gap by providing an AI-assisted conversational interface capable of guiding diagnostic reasoning according to established FDA rare disease classifications.
+DrChatPatin addresses the need for AI-assisted support in the differential diagnosis of rare diseases through a secure conversational interface. Its core Web3 components, including the user interface and encrypted conversation storage, are deployed as ICP canisters. A dedicated external API layer connects the application to the diagnostic inference engine. This architecture combines decentralized persistence and identity management with flexible AI model integration.
 
 Key properties of the system:
 
 - **Decentralized execution**: Both the user interface and conversation storage logic are deployed as ICP canisters, ensuring no single point of failure.
-- **Persistent conversation history**: Patient-provider interactions are encrypted, stored and immutably on-chain via the backend canister.
+- **Persistent conversation history**:Interactions are encrypted and stored on-chain through the backend canister.
 - **External AI integration**: A dedicated API layer connects the application to an external AI model, enabling intelligent diagnostic responses.
 - **Voice interaction support**: The application supports speech-to-text input, improving accessibility in clinical environments.
 - **Secure rendering**: AI responses are rendered as sanitized Markdown to prevent injection vulnerabilities.
@@ -84,9 +85,9 @@ Key properties of the system:
 
 ## System Architecture
 
-The application follows a three-layer architecture deployed on the Internet Computer mainnet:
+The application follows a three-part architecture composed of two ICP canisters and an external API layer for AI inference.
 
-![Diagram-rquitecture](/images/Arquitecture.png)
+![Diagram-Arquitecture](/images/Arquitecture.png)
 
 The frontend canister serves the React-based user interface as static assets. The backend canister, written in Motoko, manages conversation state and persistent storage. The API layer handles communication with an external AI model responsible for generating diagnostic responses.
 
@@ -94,13 +95,13 @@ The frontend canister serves the React-based user interface as static assets. Th
 
 ## API
 
-DrChatPatin includes a dedicated API layer that serves as the bridge between the ICP Canisters and the external AI diagnostic engine. This module is responsible for forwarding user queries, receiving model responses, and returning structured data to the frontend for rendering.
+DrChatPatin includes a dedicated API layer that serves as the bridge between the ICP canisters and the external AI diagnostic engine. This module is responsible for forwarding user queries, receiving model responses, and returning structured data to the frontend for rendering.
 
 ### Responsibilities
 
 - Receive conversation context
 - Extract information from RAG (if enabled)
-- Process model reponse (local or third party API uses)
+- Process model responses from either a local model or a third-party API
 - Parse and return AI-generated responses to the frontend
 
 ### Configuration
