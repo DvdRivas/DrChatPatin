@@ -62,6 +62,7 @@ DrChatPatin is a decentralized application (dApp) designed to assist healthcare 
 - [Available Scripts](#available-scripts)
 - [Environment Configuration](#environment-configuration)
 - [Motoko Dependencies](#motoko-dependencies)
+- [Supplementary Material](#complementary-material)
 - [References](#references)
 
 ---
@@ -304,6 +305,13 @@ dfx deploy --network ic
 | Test | `npm test` | Runs the test suite across all workspaces |
 | DFX help | `dfx help` | Displays DFX SDK command reference |
 | Canister help | `dfx canister --help` | Displays canister management commands |
+
+---
+## Supplementary Material
+
+The complete list of 56 queries, along with their corresponding ICD-10 diagnoses used for evaluation, is available in Supplementary Data S1 at the repository DrChatPatin-Supplementary-Data (https://github.com/DvdRivas/DrChatPatin-Supplementary-Data). 
+
+Additionally, the evaluation code (SystemEvaluation.py), together with the corresponding results per branch, is provided in Supplementary Data S2 in the same repository.
 
 ---
 
